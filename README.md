@@ -1,25 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# measurabl-
 
-Things you may want to cover:
+ruby "3.1.2"
+rails "~> 7.0.4"
 
-* Ruby version
+* to run app
 
-* System dependencies
+```bundle Install```
+```rails db:create```
+```rails db:migrate```
+```rails db:seed```
+```rails s```
 
-* Configuration
+in a client go to [http://localhost:3000] 
 
-* Database creation
+Send POST to [http://localhost:3000/api/users/login?user[password]=password&user[email]=test@test.com]
 
-* Database initialization
+Add returned token to your "Bearer token" for the following requests
+
+Send GET to [http://localhost:3000/api/portfolios] to view portfolies for the current user
+
+Send GET to [http://localhost:3000/api/portfolios/1/sites] to view sites for that portolio
+
+Send GET to [http://localhost:3000/api/portfolios/1/sites/1/spaces] to view spaces for that site
+
 
 * How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# measurabl-
+```rake db:seed RAILS_ENV=test --trace```
+```rails test```

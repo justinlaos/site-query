@@ -12,6 +12,12 @@ gem "pg", "~> 1.1"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
+# Devise is a flexible authentication solution for Rails based on Warden. [https://github.com/heartcombo/devise]
+gem 'devise'
+
+# JWT authentication for devise with configurable token revocation strategies
+gem 'devise-jwt'
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
